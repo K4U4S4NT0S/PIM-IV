@@ -1,0 +1,9 @@
+# Isso evita copiar arquivos desnecessários e configurações locais de desenvolvimento para a imagem.//
+
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+appsettings.Development.json

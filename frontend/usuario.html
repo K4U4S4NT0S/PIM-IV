@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>FoodSmart — Minha Conta</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  
+<style>
+.accessibility-controls{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display:flex;
+    gap:10px;
+    z-index:9999;
+}
+
+.accessibility-controls button{
+    background:#ff9f1c;
+    color:#000;
+    border:none;
+    padding:10px 14px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+body.accessibility-bold *{
+    font-weight:700 !important;
+}
+
+body.font-large{
+    font-size:18px !important;
+}
+
+body.font-large h1{
+    font-size:4rem !important;
+}
+
+body.font-large h2{
+    font-size:2.5rem !important;
+}
+
+body.font-large p,
+body.font-large a,
+body.font-large button,
+body.font-large input{
+    font-size:1.2rem !important;
+}
+</style>
+
+</head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="logo" href="index.html">FOOD<span>SMART</span></a>
+        <nav class="menu">
+          <a href="index.html">Home</a>
+          <a href="cardapio.html">Cardápio</a>
+          <a href="pedido.html">Pedido</a>
+          <a href="contato.html">Contato</a>
+          <a href="admin.html" data-admin-only>Admin</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" data-theme-toggle type="button">◐</button>
+          <a class="btn ghost active" href="login.html">Entrar</a>
+          <button class="theme-toggle hamb" type="button">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="userDashboard">
+      <section class="container page-hero user-hero reveal">
+        <span class="pill">área do cliente</span>
+        <h1 id="userGreeting">Minha conta</h1>
+        <p>Acompanhe seu login real, veja seu último pedido e continue comprando com a integração do SQL Server.</p>
+      </section>
+
+      <section class="container user-dashboard-grid reveal">
+        <article class="user-profile-card">
+          <div class="profile-avatar">FS</div>
+          <div>
+            <span class="pill">perfil conectado</span>
+            <h2 id="userName">Cliente FoodSmart</h2>
+            <p id="userEmail">email</p>
+          </div>
+          <div class="profile-lines">
+            <div><span>Tipo de conta</span><strong id="userRole">Cliente</strong></div>
+            <div><span>Status</span><strong>Logado</strong></div>
+            <div><span>Token real</span><code id="tokenPreview">carregando...</code></div>
+          </div>
+          <button class="btn ghost wide" id="logoutAccount" type="button">Sair da conta</button>
+        </article>
+
+        <article class="user-actions-card">
+          <span class="pill">ações rápidas</span>
+          <h2>O que deseja fazer agora?</h2>
+          <div class="quick-actions-grid">
+            <a class="quick-action" href="pedido.html">
+              <strong>Fazer pedido</strong>
+              <span>Monte lanches, bebidas e adicionais.</span>
+            </a>
+            <a class="quick-action" href="cardapio.html">
+              <strong>Ver cardápio</strong>
+              <span>Conheça produtos e ingredientes.</span>
+            </a>
+            <a class="quick-action" href="contato.html">
+              <strong>Contato</strong>
+              <span>Veja endereço, mapa e atendimento.</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="user-order-panel">
+          <span class="pill">acompanhamento</span>
+          <h2>Último pedido</h2>
+          <div id="userLastOrder"></div>
+        </article>
+
+        <article class="user-order-panel wide-user-panel">
+          <span class="pill">histórico real</span>
+          <h2>Meus pedidos salvos no SQL Server</h2>
+          <p>Esta área mostra apenas os pedidos vinculados ao usuário logado.</p>
+          <div id="userOrdersList"></div>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  
+<!-- Accessibility Controls -->
+<div class="accessibility-controls">
+    <button onclick="toggleBold()">Negrito</button>
+    <button onclick="increaseFont()">A+</button>
+    <button onclick="resetAccessibility()">Reset</button>
+</div>
+
+<script>
+function toggleBold(){
+    document.body.classList.toggle('accessibility-bold');
+}
+
+function increaseFont(){
+    document.body.classList.toggle('font-large');
+}
+
+function resetAccessibility(){
+    document.body.classList.remove('accessibility-bold');
+    document.body.classList.remove('font-large');
+}
+</script>
+
+
+<!-- VLibras Accessibility -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   FoodSmart &mdash; Produto
+  </title>
+  <link href="css/styles.css" rel="stylesheet"/>
+ 
+<style>
+.accessibility-controls{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display:flex;
+    gap:10px;
+    z-index:9999;
+}
+
+.accessibility-controls button{
+    background:#ff9f1c;
+    color:#000;
+    border:none;
+    padding:10px 14px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+body.accessibility-bold *{
+    font-weight:700 !important;
+}
+
+body.font-large{
+    font-size:18px !important;
+}
+
+body.font-large h1{
+    font-size:4rem !important;
+}
+
+body.font-large h2{
+    font-size:2.5rem !important;
+}
+
+body.font-large p,
+body.font-large a,
+body.font-large button,
+body.font-large input{
+    font-size:1.2rem !important;
+}
+</style>
+
+</head>
+ <body>
+  <header class="header">
+   <div class="container nav">
+    <a class="logo" href="index.html">
+     FOOD
+     <span>
+      SMART
+     </span>
+    </a>
+    <nav class="menu">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="cardapio.html">
+      Card&aacute;pio
+     </a>
+     <a href="pedido.html">
+      Pedido
+     </a>
+     <a href="contato.html">
+      Contato
+     </a>
+    </nav>
+    <div class="nav-actions">
+     <button class="theme-toggle" data-theme-toggle="">
+      ◐
+     </button>
+     <a class="btn ghost" href="login.html">
+      Entrar
+     </a>
+     <button class="theme-toggle hamb">
+      ☰
+     </button>
+    </div>
+   </div>
+  </header>
+  <main>
+   <section class="container hero">
+    <div>
+     <span class="pill">
+      produto
+     </span>
+     <h1>
+      X-Tudo
+      <em>
+       Prime
+      </em>
+     </h1>
+     <p>
+      Blend artesanal, cheddar, bacon, salada fresca e molho especial FoodSmart.
+     </p>
+     <a class="btn brand" href="pedido.html">
+      Pedir agora
+     </a>
+    </div>
+    <div class="hero-card big" style="position:relative;width:100%">
+     <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+    </div>
+   </section>
+  </main>
+  <script src="js/app.js">
+  </script>
+ 
+<!-- Accessibility Controls -->
+<div class="accessibility-controls">
+    <button onclick="toggleBold()">Negrito</button>
+    <button onclick="increaseFont()">A+</button>
+    <button onclick="resetAccessibility()">Reset</button>
+</div>
+
+<script>
+function toggleBold(){
+    document.body.classList.toggle('accessibility-bold');
+}
+
+function increaseFont(){
+    document.body.classList.toggle('font-large');
+}
+
+function resetAccessibility(){
+    document.body.classList.remove('accessibility-bold');
+    document.body.classList.remove('font-large');
+}
+</script>
+
+
+<!-- VLibras Accessibility -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

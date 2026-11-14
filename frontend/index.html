@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   FoodSmart &mdash; Home
+  </title>
+  <link href="https://images.unsplash.com" rel="preconnect"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+ 
+<style>
+.accessibility-controls{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display:flex;
+    gap:10px;
+    z-index:9999;
+}
+
+.accessibility-controls button{
+    background:#ff9f1c;
+    color:#000;
+    border:none;
+    padding:10px 14px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+body.accessibility-bold *{
+    font-weight:700 !important;
+}
+
+body.font-large{
+    font-size:18px !important;
+}
+
+body.font-large h1{
+    font-size:4rem !important;
+}
+
+body.font-large h2{
+    font-size:2.5rem !important;
+}
+
+body.font-large p,
+body.font-large a,
+body.font-large button,
+body.font-large input{
+    font-size:1.2rem !important;
+}
+</style>
+
+</head>
+ <body>
+  <header class="header">
+   <div class="container nav">
+    <a class="logo" href="index.html">
+     FOOD
+     <span>
+      SMART
+     </span>
+    </a>
+    <nav class="menu">
+     <a class="active" href="index.html">
+      Home
+     </a>
+     <a href="cardapio.html">
+      Card&aacute;pio
+     </a>
+     <a href="pedido.html">
+      Pedido
+     </a>
+     <a href="contato.html">
+      Contato
+     </a>
+    </nav>
+    <div class="nav-actions">
+     <button class="theme-toggle" data-theme-toggle="">
+      ◐
+     </button>
+     <a class="btn ghost" href="login.html">
+      Entrar
+     </a>
+     <button class="theme-toggle hamb">
+      ☰
+     </button>
+    </div>
+   </div>
+  </header>
+  <main>
+   <section class="container hero">
+    <div class="reveal">
+     <span class="pill">
+      hamb&uacute;rguer artesanal premium
+     </span>
+     <h1>
+      Sabor que d&aacute;
+      <em>
+       vontade
+      </em>
+      de pedir.
+     </h1>
+     <p>
+      Uma experi&ecirc;ncia digital para restaurante: visual moderno, card&aacute;pio organizado, pedido r&aacute;pido e identidade quente com cores que remetem a fome, restaurante e comida artesanal.
+     </p>
+     <div class="hero-actions">
+      <a class="btn brand" href="cardapio.html">
+       Ver card&aacute;pio &rarr;
+      </a>
+      <a class="btn ghost" href="pedido.html">
+       Fazer pedido
+      </a>
+     </div>
+    </div>
+    <div class="hero-media reveal">
+     <div class="hero-card big">
+      <img alt="Hamb&uacute;rguer artesanal" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+     </div>
+     <div class="hero-card small">
+      <img alt="Batata frita" src="https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+     </div>
+     <div class="floating">
+      <div class="stars">
+       &starf;&starf;&starf;&starf;&starf;
+      </div>
+      <strong>
+       Combo mais pedido
+      </strong>
+      <p style="color:var(--muted);margin:8px 0 0">
+       Burger, fritas crocantes e bebida gelada.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="container section reveal">
+    <div class="section-head">
+     <div>
+      <span class="pill">
+       destaques
+      </span>
+      <h2>
+       Lanches da casa
+      </h2>
+     </div>
+     <p class="lead">
+      Cards com fotos grandes, pre&ccedil;o claro e bot&atilde;o de pedido para deixar o fluxo mais profissional.
+     </p>
+    </div>
+    <div class="grid cards">
+     <article class="card">
+      <div class="card-img">
+       <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+      </div>
+      <div class="card-body">
+       <span class="tag">
+        Smash
+       </span>
+       <div class="card-row">
+        <h3>
+         X-Tudo Prime
+        </h3>
+        <span class="price">
+         R$ 34,90
+        </span>
+       </div>
+       <p>
+        Blend, cheddar, bacon, salada e molho da casa.
+       </p>
+       <button class="btn brand" data-add="X-Tudo Prime">
+        Pedir agora
+       </button>
+      </div>
+     </article>
+     <article class="card">
+      <div class="card-img">
+       <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+      </div>
+      <div class="card-body">
+       <span class="tag">
+        Cheddar
+       </span>
+       <div class="card-row">
+        <h3>
+         Double Cheddar
+        </h3>
+        <span class="price">
+         R$ 31,90
+        </span>
+       </div>
+       <p>
+        Dois smashs, queijo cheddar cremoso e cebola.
+       </p>
+       <button class="btn brand" data-add="Double Cheddar">
+        Pedir agora
+       </button>
+      </div>
+     </article>
+     <article class="card">
+      <div class="card-img">
+       <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+      </div>
+      <div class="card-body">
+       <span class="tag">
+        Frango
+       </span>
+       <div class="card-row">
+        <h3>
+         Chicken Crispy
+        </h3>
+        <span class="price">
+         R$ 28,90
+        </span>
+       </div>
+       <p>
+        Frango crocante, maionese temperada e alface.
+       </p>
+       <button class="btn brand" data-add="Chicken Crispy">
+        Pedir agora
+       </button>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section class="container section reveal">
+    <div class="carousel">
+     <div class="track">
+      <article class="slide">
+       <div class="slide-text">
+        <span class="pill">
+         combo premium
+        </span>
+        <h3>
+         Smash + fritas + refri
+        </h3>
+        <p class="lead">
+         Carrossel com destaque visual para promo&ccedil;&otilde;es e produtos principais.
+        </p>
+        <a class="btn brand" href="pedido.html">
+         Montar pedido
+        </a>
+       </div>
+       <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+      </article>
+      <article class="slide">
+       <div class="slide-text">
+        <span class="pill">
+         bebidas
+        </span>
+        <h3>
+         Bebidas geladas
+        </h3>
+        <p class="lead">
+         &Aacute;rea para divulgar refrigerantes, sucos, milk-shakes e combos.
+        </p>
+        <a class="btn brand" href="cardapio.html#bebidas">
+         Ver bebidas
+        </a>
+       </div>
+       <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+      </article>
+      <article class="slide">
+       <div class="slide-text">
+        <span class="pill">
+         adicionais
+        </span>
+        <h3>
+         Complete do seu jeito
+        </h3>
+        <p class="lead">
+         Bacon, cheddar, onion rings e molhos para aumentar o ticket do pedido.
+        </p>
+        <a class="btn brand" href="cardapio.html#adicionais">
+         Ver adicionais
+        </a>
+       </div>
+       <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+      </article>
+     </div>
+     <div class="carousel-controls">
+      <button class="round" data-prev="">
+       &lsaquo;
+      </button>
+      <button class="round" data-next="">
+       &rsaquo;
+      </button>
+     </div>
+    </div>
+   </section>
+   <section class="container section reveal" id="pedido">
+    <div class="order-box">
+     <div>
+      <span class="pill">
+       pedido r&aacute;pido
+      </span>
+      <h2>
+       Fa&ccedil;a seu pedido
+      </h2>
+      <p class="lead">
+       Formul&aacute;rio visual para simular o fluxo antes da integra&ccedil;&atilde;o com o projeto final.
+      </p>
+     </div>
+     <form class="form" id="orderForm">
+      <input class="input" id="nome" placeholder="Seu nome"/>
+      <select class="input" id="item">
+       <option>
+        X-Tudo Prime
+       </option>
+       <option>
+        Double Cheddar
+       </option>
+       <option>
+        Chicken Crispy
+       </option>
+       <option>
+        Combo Fam&iacute;lia
+       </option>
+      </select>
+      <textarea class="input" placeholder="Observa&ccedil;&otilde;es do pedido"></textarea>
+      <button class="btn brand">
+       Enviar pedido &rarr;
+      </button>
+     </form>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">
+      FOOD
+      <span>
+       SMART
+      </span>
+     </div>
+     <p>
+      Hamburgueria artesanal com experi&ecirc;ncia digital premium.
+     </p>
+    </div>
+    <div>
+     <h4>
+      Menu
+     </h4>
+     <a href="cardapio.html">
+      Card&aacute;pio
+     </a>
+     <br/>
+     <a href="pedido.html">
+      Pedido
+     </a>
+    </div>
+    <div>
+     <h4>
+      Atendimento
+     </h4>
+     <p>
+      Segunda a domingo
+      <br/>
+      18h &agrave;s 23h
+     </p>
+    </div>
+    <div>
+     <h4>
+      Contato
+     </h4>
+     <p>
+      WhatsApp &bull; Instagram &bull; Localiza&ccedil;&atilde;o
+     </p>
+    </div>
+   </div>
+   <div class="container copy">
+    &copy; 2026 FoodSmart. Todos os direitos reservados.
+   </div>
+  </footer>
+  <script src="js/app.js">
+  </script>
+ 
+<!-- Accessibility Controls -->
+<div class="accessibility-controls">
+    <button onclick="toggleBold()">Negrito</button>
+    <button onclick="increaseFont()">A+</button>
+    <button onclick="resetAccessibility()">Reset</button>
+</div>
+
+<script>
+function toggleBold(){
+    document.body.classList.toggle('accessibility-bold');
+}
+
+function increaseFont(){
+    document.body.classList.toggle('font-large');
+}
+
+function resetAccessibility(){
+    document.body.classList.remove('accessibility-bold');
+    document.body.classList.remove('font-large');
+}
+</script>
+
+
+<!-- VLibras Accessibility -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

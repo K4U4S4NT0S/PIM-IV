@@ -1,0 +1,12 @@
+# .NET
+**/bin/
+**/obj/
+
+# Configurações locais
+**/appsettings.Development.json
+**/appsettings.*.Development.json
+
+# Segredos e variáveis de ambiente
+.env
+.env.*
+!.env.example

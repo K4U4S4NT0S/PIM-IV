@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   FoodSmart &mdash; Login
+  </title>
+  <link href="css/styles.css" rel="stylesheet"/>
+ 
+<style>
+.accessibility-controls{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display:flex;
+    gap:10px;
+    z-index:9999;
+}
+
+.accessibility-controls button{
+    background:#ff9f1c;
+    color:#000;
+    border:none;
+    padding:10px 14px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+body.accessibility-bold *{
+    font-weight:700 !important;
+}
+
+body.font-large{
+    font-size:18px !important;
+}
+
+body.font-large h1{
+    font-size:4rem !important;
+}
+
+body.font-large h2{
+    font-size:2.5rem !important;
+}
+
+body.font-large p,
+body.font-large a,
+body.font-large button,
+body.font-large input{
+    font-size:1.2rem !important;
+}
+</style>
+
+</head>
+ <body style="--auth-img:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+  <main class="auth-page">
+   <section class="auth-visual">
+    <div class="auth-brand logo">
+     FOOD
+     <span>
+      SMART
+     </span>
+    </div>
+    <div class="auth-tabs">
+     <a class="active" href="login.html">
+      Entrar
+     </a>
+     <a href="cadastro.html">
+      Cadastro
+     </a>
+    </div>
+    <div class="auth-showcase">
+     <span class="pill">
+      smash burger
+     </span>
+     <h2>
+      X-Tudo
+     </h2>
+     <p>
+      Blend artesanal, cheddar, bacon e molho especial.
+     </p>
+    </div>
+   </section>
+   <section class="auth-form-wrap">
+    <form class="auth-form form" id="authForm">
+     <a class="back" href="index.html">
+      &lsaquo; VOLTAR AO SITE
+     </a>
+     <span class="tag">
+      &Aacute;rea do cliente
+     </span>
+     <h1>
+      Bem-vindo de
+      <em>
+       volta.
+      </em>
+     </h1>
+     <p class="lead">
+      Entre para acompanhar pedidos e salvar seus favoritos.
+     </p>
+     <label>
+      E-mail
+     </label>
+     <input class="input" placeholder="seu@email.com" required="" type="email"/>
+     <label>
+      Senha
+     </label>
+     <input class="input" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required="" type="password"/>
+     <div class="auth-row">
+      <label>
+       <input type="checkbox"/>
+       Lembrar de mim
+      </label>
+      <a href="#">
+       Esqueceu a senha?
+      </a>
+     </div>
+     <button class="btn">
+      Entrar na conta &rarr;
+     </button>
+     <div class="divider">
+      ou continue com
+     </div>
+     <div class="socials">
+      <button class="btn ghost" type="button">
+       Google
+      </button>
+      <button class="btn ghost" type="button">
+       GitHub
+      </button>
+     </div>
+    </form>
+   </section>
+  </main>
+  <script src="js/app.js">
+  </script>
+ 
+<!-- Accessibility Controls -->
+<div class="accessibility-controls">
+    <button onclick="toggleBold()">Negrito</button>
+    <button onclick="increaseFont()">A+</button>
+    <button onclick="resetAccessibility()">Reset</button>
+</div>
+
+<script>
+function toggleBold(){
+    document.body.classList.toggle('accessibility-bold');
+}
+
+function increaseFont(){
+    document.body.classList.toggle('font-large');
+}
+
+function resetAccessibility(){
+    document.body.classList.remove('accessibility-bold');
+    document.body.classList.remove('font-large');
+}
+</script>
+
+
+<!-- VLibras Accessibility -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>
