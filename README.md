@@ -1,175 +1,614 @@
-<<<<<<< HEAD
-# PIM-IV
-=======
-# FOODSMART — PIM IV
+# 🍔 FOODSMART
+### Plataforma integrada de gerenciamento e pedidos para hamburguerias
 
-Sistema web para gestão de uma hamburgueria, com catálogo de produtos, autenticação de clientes, pedidos e painel administrativo.
+<p align="center">
+  <strong>Gestão inteligente, experiência digital e tecnologia integradas.</strong>
+</p>
 
-## Tecnologias
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Em%20desenvolvimento-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%23-Backend-239120?style=for-the-badge&logo=csharp&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL%20Server-Database-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
+  <img src="https://img.shields.io/badge/Flutter-Mobile-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-Containers-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+</p>
 
-- **Frontend:** HTML5, CSS3, JavaScript e Vite
-- **Backend:** ASP.NET Core 8 (C#)
-- **Persistência:** Entity Framework Core 8 e SQL Server
-- **Documentação da API:** Swagger
+---
 
-> O projeto utiliza um token próprio assinado com HMAC-SHA256. Não é um JWT padrão.
+## 📌 1. Sobre o projeto
 
-## Estrutura
+O **FOODSMART** é um sistema desenvolvido para auxiliar na gestão e operação de hamburguerias, reunindo recursos de gerenciamento administrativo, catálogo de produtos, autenticação de usuários e processamento de pedidos.
+
+A proposta é oferecer uma solução integrada, permitindo que clientes realizem pedidos por meio de interfaces digitais, enquanto a administração possui recursos para gerenciar produtos e acompanhar as operações do estabelecimento.
+
+O projeto utiliza uma arquitetura baseada em API REST, responsável por intermediar a comunicação entre as interfaces e o banco de dados.
+
+O FOODSMART foi desenvolvido como parte do **Projeto Integrado Multidisciplinar IV (PIM IV)** do curso de Análise e Desenvolvimento de Sistemas.
+
+## 🎯 2. Objetivos
+
+- Digitalizar o processo de pedidos de uma hamburgueria.
+- Centralizar o gerenciamento de produtos e pedidos.
+- Facilitar o acesso dos clientes ao cardápio.
+- Implementar autenticação e controle de usuários.
+- Integrar aplicações Web e Mobile a uma API central.
+- Utilizar banco de dados relacional para armazenamento das informações.
+- Aplicar conceitos de arquitetura de software, segurança e containerização.
+
+## 🚀 3. Funcionalidades
+
+### 👤 Gestão de usuários
+- Cadastro de usuários.
+- Autenticação de acesso.
+- Validação de credenciais.
+- Gerenciamento de informações do perfil.
+- Autenticação baseada em tokens.
+- Diferenciação entre usuários e administradores.
+
+### 🍔 Gestão de produtos
+- Cadastro e gerenciamento de produtos.
+- Consulta de produtos disponíveis.
+- Organização do cardápio.
+- Informações e valores dos produtos.
+
+### 🛒 Gestão de pedidos
+- Adição de produtos ao pedido.
+- Registro de pedidos.
+- Associação de pedidos aos usuários autenticados.
+- Possibilidade de pedidos como convidados.
+- Consulta do histórico de pedidos.
+- Consulta de informações e status dos pedidos.
+
+### 📊 Administração
+- Gerenciamento de produtos.
+- Consulta de informações operacionais.
+- Endpoint de análise e resumo de informações.
+- Organização das operações administrativas.
+
+## 🧰 4. Tecnologias utilizadas
+
+O projeto utiliza diferentes tecnologias, cada uma responsável por uma camada específica da aplicação.
+
+### Backend
+
+| Tecnologia | Aplicação |
+|---|---|
+| C# | Linguagem principal do backend |
+| .NET 8 | Plataforma de desenvolvimento |
+| ASP.NET Core | Construção da API REST |
+| Entity Framework Core | Mapeamento objeto-relacional |
+| SQL Server | Banco de dados relacional |
+| Docker | Containerização da API |
+
+**C#**
+
+Linguagem utilizada na implementação das regras de negócio, modelos, serviços e controladores da aplicação.
+
+**ASP.NET Core (.NET 8)**
+
+Framework responsável pela construção da API REST, gerenciamento de requisições HTTP e integração entre as diferentes camadas do sistema.
+
+**Entity Framework Core**
+
+ORM utilizado para mapear as entidades C# para as tabelas do SQL Server, facilitando operações de consulta e persistência de dados.
+
+### Frontend Web
+
+| Tecnologia | Aplicação |
+|---|---|
+| HTML5 | Estrutura das páginas |
+| CSS3 | Estilização e responsividade |
+| JavaScript | Interatividade e comunicação com a API |
+| Vite | Ambiente de desenvolvimento e build |
+
+**HTML5:** estruturação das páginas e componentes da interface.
+
+**CSS3:** desenvolvimento visual, organização dos elementos e adaptação das interfaces.
+
+**JavaScript:** implementação das interações, validações e comunicação com os endpoints da API.
+
+**Vite:** ferramenta utilizada para iniciar o ambiente de desenvolvimento e disponibilizar os recursos do frontend.
+
+### Aplicativo Mobile
+
+| Tecnologia | Aplicação |
+|---|---|
+| Flutter | Framework de desenvolvimento mobile |
+| Dart | Linguagem de programação |
+| Flutter Secure Storage | Armazenamento local seguro de credenciais |
+
+O aplicativo mobile foi desenvolvido utilizando Flutter e Dart, consumindo os serviços disponibilizados pelo backend.
+
+Entre os recursos implementados estão autenticação, cadastro, perfil do usuário, consulta de produtos, finalização de pedidos e histórico de compras.
+
+**Observação:** o aplicativo mobile possui diretório de desenvolvimento separado e não está incluído na estrutura atual deste repositório.
+
+### Banco de dados
+
+**Microsoft SQL Server**
+
+Banco relacional utilizado para armazenar e organizar as informações da aplicação.
+
+**Entity Framework Core**
+
+Responsável pela comunicação entre a aplicação C# e o banco de dados.
+
+Também são utilizados recursos próprios do SQL Server, como relacionamentos, chaves estrangeiras, procedures e triggers.
+
+### DevOps e ferramentas
+
+| Ferramenta | Utilização |
+|---|---|
+| Docker | Criação e execução de containers |
+| Git | Controle de versão |
+| GitHub | Hospedagem do repositório |
+| Visual Studio | Desenvolvimento do backend |
+| Visual Studio Code | Desenvolvimento e edição de arquivos |
+| SQL Server Management Studio | Administração do banco de dados |
+| Android Studio | Ambiente de desenvolvimento e emulação mobile |
+
+---
+
+## 🏗️ 5. Arquitetura do sistema
+
+O FOODSMART utiliza uma arquitetura organizada em camadas, separando as interfaces, a lógica de negócio e o armazenamento de dados.
 
 ```text
-PIM-III/
+                    FOODSMART
+                        |
+           +------------+------------+
+           |                         |
+       FRONTEND WEB              MOBILE
+     HTML/CSS/JavaScript       Flutter/Dart
+           |                         |
+           +------------+------------+
+                        |
+                     API REST
+                   ASP.NET Core
+                      .NET 8
+                        |
+              Entity Framework Core
+                        |
+                  SQL SERVER
+                        |
+          +-------------+-------------+
+          |             |             |
+        Users         Products       Orders
+                                      |
+                                  OrderItems
+```
+
+### Fluxo de funcionamento
+
+1. O usuário acessa o sistema pelo frontend Web ou aplicativo Mobile.
+2. A interface realiza uma requisição HTTP para a API.
+3. O ASP.NET Core recebe e processa a requisição.
+4. Os controladores executam as operações necessárias.
+5. O Entity Framework Core realiza a comunicação com o SQL Server.
+6. O banco de dados retorna as informações solicitadas.
+7. A API devolve uma resposta para a interface.
+
+## 📁 6. Estrutura do repositório
+
+```text
+PIM_IV/
+│
 ├── backend/
 │   └── FoodSmart.Api/
 │       ├── Contracts/
 │       ├── Controllers/
 │       ├── Data/
 │       ├── Models/
+│       ├── Properties/
 │       ├── Services/
-│       └── Program.cs
+│       ├── Dockerfile
+│       ├── .dockerignore
+│       ├── Program.cs
+│       ├── appsettings.json
+│       └── FoodSmart.Api.csproj
+│
+├── database/
+│   ├── sql/
+│   │   └── 01_atualizacao_segura.sql
+│   └── README.md
+│
 ├── frontend/
 │   ├── css/
+│   │   └── styles.css
 │   ├── js/
-│   └── *.html
+│   │   └── app.js
+│   ├── admin.html
+│   ├── cadastro.html
+│   ├── cardapio.html
+│   ├── contato.html
+│   ├── index.html
+│   ├── login.html
+│   ├── pedido.html
+│   ├── produto.html
+│   ├── usuario.html
+│   ├── package.json
+│   └── vite.config.js
+│
+├── tests/
+│   └── FoodSmart.Api.Tests/
+│       ├── FoodSmart.Api.Tests.csproj
+│       └── PasswordHasherTests.cs
+│
+├── .env.example
+├── .gitignore
+├── AUDITORIA_PIM_IV.md
 ├── foodsmart-full.sln
-└── README.md
+└── scripts-start-dev.ps1
 ```
 
-## Requisitos
+### Organização das pastas
 
-- .NET SDK 8
-- Node.js LTS e npm
-- SQL Server Express ou outra instância SQL Server acessível
-- SQL Server Management Studio (opcional, para administrar o banco)
+**backend/**
 
-## Configuração e execução local
+Contém a API desenvolvida em C# e ASP.NET Core.
 
-### 1. Banco e backend
+- `Contracts/`: contratos utilizados na comunicação e transferência de dados.
+- `Controllers/`: controladores responsáveis pelas requisições HTTP.
+- `Data/`: contexto de acesso ao banco de dados.
+- `Models/`: entidades que representam os dados do sistema.
+- `Services/`: serviços responsáveis por funcionalidades específicas.
+- `Program.cs`: configuração e inicialização da aplicação.
 
-A configuração local padrão aponta para `localhost\SQLEXPRESS` e para o banco `FoodSmartDb`.
+**frontend/**
 
-Se necessário, ajuste `ConnectionStrings:DefaultConnection` em `backend/FoodSmart.Api/appsettings.Development.json` ou defina a variável de ambiente `ConnectionStrings__DefaultConnection`.
+Contém a interface Web, com páginas HTML, arquivos CSS e scripts JavaScript.
 
-O ambiente Development contém uma chave de autenticação e uma senha inicial de administrador destinadas **somente ao computador local**. Não publique esses valores nem use-os em produção.
+**database/**
 
-No PowerShell:
+Contém os scripts SQL e orientações relacionadas à estrutura e atualização do banco de dados.
+
+**tests/**
+
+Contém o projeto de testes automatizados do backend.
+
+---
+
+# ⚙️ 7. Requisitos para instalação
+
+Antes de executar o projeto, instale as ferramentas necessárias.
+
+| Ferramenta | Versão / requisito |
+|---|---|
+| .NET SDK | 8.0 |
+| SQL Server | Instância configurada |
+| SQL Server Management Studio | Para administração do banco |
+| Node.js | Versão compatível com o Vite |
+| npm | Gerenciador de pacotes |
+| Git | Controle de versão |
+| Docker Desktop | Para execução em containers |
+| Flutter SDK | Para o aplicativo mobile |
+| Android Studio | Para emulação Android |
+
+## 🔧 8. Configuração do banco de dados
+
+O projeto utiliza Microsoft SQL Server como banco de dados principal.
+
+### Etapa 1 — Instalar o SQL Server
+
+Instale o SQL Server e configure uma instância local.
+
+Também instale o SQL Server Management Studio para administrar o banco.
+
+### Etapa 2 — Criar o banco
+
+No SSMS, conecte-se à instância SQL Server e crie o banco:
+
+```sql
+CREATE DATABASE FoodSmartDb;
+GO
+```
+
+### Etapa 3 — Configurar a conexão
+
+A aplicação utiliza uma string de conexão para acessar o banco.
+
+A configuração pode ser fornecida por variável de ambiente:
+
+```text
+ConnectionStrings__DefaultConnection
+```
+
+Exemplo para ambiente local com autenticação integrada:
+
+```text
+Server=localhost\SQLEXPRESS;Database=FoodSmartDb;Trusted_Connection=True;TrustServerCertificate=True;
+```
+
+Ajuste o servidor e o método de autenticação conforme sua instalação.
+
+### Etapa 4 — Scripts SQL
+
+Os scripts complementares estão localizados em:
+
+```text
+database/sql/
+```
+
+O projeto também possui recursos de integridade e consulta no SQL Server, incluindo:
+
+- Trigger `TR_Orders_ValidateStatusTransition`.
+- Procedure `usp_FoodSmart_OrderSummary`.
+
+Execute os scripts correspondentes no banco, quando necessário, seguindo a ordem indicada nos arquivos.
+
+---
+
+# 🖥️ 9. Executando o Backend
+
+### Etapa 1 — Abrir o projeto
+
+Abra o terminal na raiz do repositório e acesse:
+
+```bash
+cd backend/FoodSmart.Api
+```
+
+### Etapa 2 — Restaurar dependências
+
+```bash
+dotnet restore
+```
+
+O comando restaura os pacotes NuGet necessários para o projeto.
+
+### Etapa 3 — Compilar a aplicação
+
+```bash
+dotnet build
+```
+
+Esse comando compila o backend e identifica possíveis erros de compilação.
+
+### Etapa 4 — Configurar variáveis de ambiente
+
+Configure as variáveis necessárias para a conexão com o banco e autenticação.
+
+PowerShell:
 
 ```powershell
-cd backend/FoodSmart.Api
-dotnet restore
+$env:ConnectionStrings__DefaultConnection="SUA_STRING_DE_CONEXAO"
+$env:Auth__Secret="SUA_CHAVE_SECRETA"
+$env:SeedAdmin__Password="SUA_SENHA_DE_ADMIN"
+```
+
+Utilize valores próprios do ambiente local. Nunca publique credenciais reais no GitHub.
+
+### Etapa 5 — Executar a API
+
+```bash
 dotnet run
 ```
 
-Para executar os testes automatizados da solução:
+A API será iniciada conforme as configurações de execução do projeto.
 
-```powershell
-dotnet test
+A porta e o endereço devem ser conferidos na saída do terminal ou nas configurações do ambiente.
+
+---
+
+# 🌐 10. Executando o Frontend Web
+
+### Etapa 1 — Acessar a pasta
+
+```bash
+cd frontend
 ```
 
-A API local é iniciada em `http://localhost:5077`. A documentação Swagger fica em `/swagger`.
+### Etapa 2 — Instalar dependências
 
-Na primeira execução, o backend cria o banco/tabelas com `EnsureCreated` e inclui produtos de demonstração. O administrador local é criado somente quando o banco não possui usuários.
+```bash
+npm install
+```
 
-**Acesso local de demonstração:**
+O npm instala os pacotes definidos no `package.json`.
 
-- E-mail: `admin@foodsmart.com`
-- Senha: `Admin@123`
+### Etapa 3 — Configurar a comunicação com a API
 
-Troque essa senha antes de qualquer demonstração compartilhada ou publicação.
+Confira o endereço da API utilizado pelo JavaScript do frontend.
 
-### 2. Frontend
+A URL deve apontar para o ambiente em que o backend está sendo executado.
 
-Em outro terminal:
+### Etapa 4 — Iniciar o ambiente de desenvolvimento
 
-```powershell
-cd frontend
-npm ci
+```bash
 npm run dev
 ```
 
-Abra `http://localhost:5173`.
+O Vite iniciará o servidor de desenvolvimento e exibirá no terminal o endereço local para acessar a aplicação.
 
-A URL da API é definida em `frontend/js/app.js` pela constante `API_BASE`. Para ambientes diferentes, ajuste essa configuração antes de publicar.
+---
 
-### 3. Build de produção do frontend
+# 📱 11. Aplicativo Mobile — Flutter
 
-```powershell
-cd frontend
-npm ci
-npm run build
+O aplicativo mobile foi desenvolvido separadamente utilizando Flutter e Dart.
+
+### Etapa 1 — Instalar o Flutter
+
+Instale o Flutter SDK e configure o ambiente de desenvolvimento.
+
+Confira a instalação:
+
+```bash
+flutter doctor
 ```
 
-O Vite gera a saída em `frontend/dist`.
+### Etapa 2 — Acessar o projeto mobile
 
-## Funcionalidades existentes
+Abra o diretório do aplicativo Flutter em seu ambiente de desenvolvimento.
 
-- Cadastro e login de clientes
-- Catálogo e consulta de produtos
-- Criação de pedidos vinculados ao cliente autenticado
-- Área do usuário e consulta dos próprios pedidos
-- Painel administrativo
-- Cadastro, edição e desativação lógica de produtos
-- Consulta e atualização de status de pedidos
-- Resumo de vendas e indicadores administrativos
+### Etapa 3 — Instalar dependências
 
-## Configuração para produção
+```bash
+flutter pub get
+```
 
-Configure as variáveis de ambiente no servidor. Não armazene segredos no repositório:
+### Etapa 4 — Configurar a API
+
+Para o emulador Android, o endereço local da API utilizada no desenvolvimento é:
 
 ```text
-Auth__Secret=<chave aleatória forte com pelo menos 32 bytes>
-SeedAdmin__Password=<senha forte para o administrador inicial>
-ConnectionStrings__DefaultConnection=<connection string do SQL Server>
+http://10.0.2.2:5077/api
 ```
 
-`SeedAdmin__Password` é usado apenas se o banco ainda não possuir usuários. Se o banco já tiver sido inicializado, altere a senha do administrador pelo fluxo administrativo disponível no ambiente ou por procedimento seguro de administração do banco.
+Esse endereço permite que o emulador Android acesse o servidor executado na máquina hospedeira.
 
-Também revise as origens permitidas na política CORS em `Program.cs`, habilite HTTPS e configure backups do SQL Server.
+### Etapa 5 — Executar o aplicativo
 
-## Observações técnicas
+```bash
+flutter run
+```
 
-- O projeto ainda usa `EnsureCreated`; migrations formais do EF Core são recomendadas para evolução controlada do banco no PIM IV.
-- Pedidos criados sem conta não podem usar o endpoint de acompanhamento por ID. O acompanhamento foi restringido para evitar exposição de pedidos de convidados por enumeração de IDs.
-- A pasta `bin`, `obj`, `node_modules` e `dist` é gerada localmente e não deve ser versionada.
-- Não há implementação de machine learning no código atual; os indicadores do dashboard são cálculos descritivos.
+O Flutter compilará e iniciará o aplicativo no dispositivo ou emulador selecionado.
 
-## Próximas melhorias recomendadas para o PIM IV
+---
 
-1. Criar migrations do Entity Framework Core.
-2. Implementar fluxo seguro de redefinição/alteração de senha.
-3. Adicionar testes automatizados para autenticação, produtos e pedidos.
-4. Separar o JavaScript do frontend em módulos por responsabilidade.
-5. Implementar uma credencial própria para acompanhamento de pedidos de convidados, caso esse fluxo seja necessário.
-6. Adicionar paginação e filtros para pedidos e produtos.
+# 🐳 12. Executando com Docker
 
+O backend possui um Dockerfile para criação de uma imagem da API.
 
-## Estado da refatoração técnica (10/11/2026)
+### Etapa 1 — Instalar Docker Desktop
 
-- Tokens assinados agora carregam somente o identificador e a expiração; a função e a situação ativa são consultadas no SQL Server em cada requisição autenticada.
-- O verificador PBKDF2 rejeita hashes malformados sem propagar erros de parsing.
-- O cadastro valida nome, e-mail e senha; o papel padrão de novos usuários é `Cliente`.
-- Pedidos rejeitam itens inválidos, quantidades fora do limite e dados de cliente incompatíveis; os preços são obtidos do banco e o total é calculado pela API.
-- Mudanças de status seguem transições permitidas; estados `Concluído` e `Cancelado` são finais.
-- Foram adicionadas restrições de modelo e índices. Para bancos já existentes, essas alterações só entram no SQL Server após uma migration ou script de atualização.
+Instale e inicie o Docker Desktop.
 
-### Migração segura do banco existente
+Confira se o Docker está funcionando:
 
-O banco atual foi criado com `EnsureCreated` e contém uma alteração manual de esquema. Não execute `EnsureCreated` como substituto de migrations e não apague o banco para iniciar migrations.
+```bash
+docker --version
+```
 
-Procedimento planejado:
-1. Faça backup completo de `FoodSmartDb` no SSMS.
-2. Em uma cópia de desenvolvimento do banco, gere uma migration inicial usando o modelo atual e revise o SQL gerado.
-3. Para um banco que já existe, crie uma migration de baseline sem recriar tabelas existentes; compare o esquema real com o modelo e registre a baseline somente depois de validar que as tabelas/índices/constraints correspondem.
-4. Gere e revise um script idempotente (`dotnet ef migrations script --idempotent`) antes de executar no banco real.
-5. Só depois de validar backup, baseline e script, substitua a inicialização por `Database.MigrateAsync()` em ambiente controlado.
-6. Nunca misture `EnsureCreated` e migrations no mesmo banco.
+### Etapa 2 — Acessar a pasta do backend
 
-**A migration/baseline não foi gerada automaticamente nesta entrega**, pois precisa ser comparada com o esquema SQL Server real para evitar perda de dados. Os check constraints e índices adicionados ao modelo ainda não são aplicados ao banco existente até essa etapa.
+```bash
+cd backend/FoodSmart.Api
+```
 
-### Testes automatizados
+### Etapa 3 — Construir a imagem
 
-Foi adicionado `tests/FoodSmart.Api.Tests`, com testes do hash de senha (hash válido, senha incorreta e formatos inválidos). Execute `dotnet test` após restaurar os pacotes NuGet.
+```bash
+docker build -t foodsmart-api:1.0 .
+```
 
-### Refatoração do JavaScript
+O Docker utilizará as instruções do Dockerfile para compilar e criar a imagem da aplicação.
 
-O `frontend/js/app.js` foi preservado para evitar regressão nas páginas já validadas manualmente. A divisão em módulos deve ser feita em etapa separada, com testes de regressão por página, pois as nove páginas compartilham inicialização e estado.
->>>>>>> 1e82c29 (feat: initial FOODSMART PIM IV)
+### Etapa 4 — Executar o container
+
+Exemplo de execução:
+
+```bash
+docker run -d \
+  --name foodsmart-api \
+  -p 5077:8080 \
+  -e "ConnectionStrings__DefaultConnection=SUA_STRING_DE_CONEXAO" \
+  -e "Auth__Secret=SUA_CHAVE_SECRETA" \
+  foodsmart-api:1.0
+```
+
+Ajuste a string de conexão para permitir que o container alcance o SQL Server no ambiente utilizado.
+
+### Etapa 5 — Verificar o container
+
+Listar containers em execução:
+
+```bash
+docker ps
+```
+
+Consultar os logs:
+
+```bash
+docker logs foodsmart-api
+```
+
+Parar o container:
+
+```bash
+docker stop foodsmart-api
+```
+
+Remover o container:
+
+```bash
+docker rm foodsmart-api
+```
+
+**Importante:** as variáveis de ambiente devem conter credenciais próprias do ambiente. Não utilize senhas reais diretamente nos comandos salvos em arquivos ou publicados no repositório.
+
+---
+
+# 🧪 13. Testes automatizados
+
+O repositório possui um projeto de testes para o backend.
+
+Localização:
+
+```text
+tests/FoodSmart.Api.Tests/
+```
+
+Para executar os testes da solução, utilize:
+
+```bash
+dotnet test
+```
+
+O comando executa os testes automatizados encontrados nos projetos de teste da solução.
+
+---
+
+# 🔐 14. Segurança
+
+Algumas práticas de segurança adotadas no projeto:
+
+- Separação entre controladores, serviços e modelos.
+- Utilização de autenticação baseada em tokens.
+- Serviço específico para geração e validação de tokens.
+- Serviço dedicado à verificação de senhas.
+- Armazenamento de credenciais mobile com Flutter Secure Storage.
+- Configurações sensíveis fornecidas por variáveis de ambiente.
+- Separação de arquivos locais e artefatos de compilação por meio do `.gitignore`.
+
+**Atenção:** nunca publique senhas reais, chaves privadas, tokens ou strings de conexão com credenciais no GitHub.
+
+---
+
+# 👨‍💻 15. Equipe de desenvolvimento
+
+Projeto desenvolvido em equipe como parte do Projeto Integrado Multidisciplinar IV.
+
+| Integrante | Responsabilidades |
+|---|---|
+| Kauã Santos | Desenvolvimento Frontend e Backend, API REST, integração com SQL Server, Entity Framework Core e autenticação |
+| Vitor Hugo | Desenvolvimento Frontend e UI/UX |
+| Igor Bonfim | Modelagem Frontend e documentação |
+| Pedro Abreu | Colaborador do projeto |
+
+---
+
+# 🎓 16. Contexto acadêmico
+
+**Instituição:** Universidade Paulista — UNIP  
+**Curso:** Análise e Desenvolvimento de Sistemas  
+**Projeto:** Projeto Integrado Multidisciplinar IV — PIM IV  
+**Sistema:** FOODSMART
+
+---
+
+# 📌 17. Considerações finais
+
+O FOODSMART representa a aplicação prática de conhecimentos adquiridos durante a formação em Análise e Desenvolvimento de Sistemas.
+
+O desenvolvimento envolve integração de aplicações, programação orientada a objetos, construção de APIs REST, modelagem e persistência de dados, desenvolvimento Web e Mobile e conceitos de DevOps.
+
+A proposta é demonstrar como diferentes tecnologias podem trabalhar em conjunto para construir uma solução digital voltada às necessidades de um estabelecimento comercial.
+
+---
+
+<p align="center">
+  <strong>FOODSMART</strong><br/>
+  Tecnologia, praticidade e gestão em um só lugar.
+</p>
