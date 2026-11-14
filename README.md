@@ -585,7 +585,7 @@ Projeto desenvolvido em equipe como parte do Projeto Integrado Multidisciplinar 
 | Kauã Santos | Desenvolvimento Frontend e Backend, API REST, integração com SQL Server, Entity Framework Core e autenticação |
 | Vitor Hugo | Desenvolvimento Frontend e UI/UX |
 | Igor Bonfim | Modelagem Frontend e documentação |
-| Pedro Abreu | Colaborador do projeto |
+
 
 ---
 
